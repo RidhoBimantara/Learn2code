@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+class Transaction:
+    def __init__(self):
+        self.items = []
+
+    def add_item(self, item_name, quantity, price_per_item):
+        self.items.append({
+            "item_name": item_name,
+            "quantity": quantity,
+            "price_per_item": price_per_item
+        })
+
+    def update_item_name(self, old_name, new_name):
+        for item in self.items:
+            if item["item_name"] == old_name:
+                item["item_name"] = new_name
+
+    def update_item_qty(self, item_name, new_quantity):
+        for item in self.items:
+            if item["item_name"] == item_name:
+                item["quantity"] = new_quantity
+
+    def update_item_price(self, item_name, new_price):
+        for item in self.items:
+            if item["item_name"] == item_name:
+                item["price_per_item"] = new_price
+
+    def delete_item(self, item_name):
+        self.items = [item for item in self.items if item["item_name"] != item_name]
+
+    def reset_transaction(self):
+        self.items = []
+
+    def check_order(self):
+        for item in self.items:
+            if not item["item_name"] or item["quantity"] <= 0 or item["price_per_item"] <= 0:
+                return "Terdapat kesalahan input data"
+        return "Pemesanan sudah benar"
+
+    def calculate_total_price(self):
+        total_price = sum(item["quantity"] * item["price_per_item"] for item in self.items)
+        if total_price > 500000:
+            return total_price * 0.9
+        elif total_price > 300000:
+            return total_price * 0.92
+        elif total_price > 200000:
+            return total_price * 0.95
+        else:
+            return total_price
+
+
+# Contoh penggunaan
+transaksi = Transaction()
+transaksi.add_item("Apel", 5, 5000)
+transaksi.add_item("Mangga", 3, 7000)
+transaksi.add_item("Pisang", 2, 3000)
+
+print(transaksi.check_order())  # Output: "Pemesanan sudah benar"
+
+total_harga = transaksi.calculate_total_price()
+print("Total harga:", total_harga)
