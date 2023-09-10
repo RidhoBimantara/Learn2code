@@ -64,3 +64,154 @@ print(transaksi.check_order())  # Output: "Pemesanan sudah benar"
 
 total_harga = transaksi.calculate_total_price()
 print("Total harga:", total_harga)
+
+# TEST CASE 1
+# Membuat transaksi baru
+transaksi = Transaction()
+
+# Menambahkan barang ke transaksi
+transaksi.add_item("Ayam Goreng", 2, 20000)
+transaksi.add_item("Pasta Gigi", 3, 15000)
+
+# Menampilkan isi transaksi
+for item in transaksi.items:
+    print("Item:", item["item_name"])
+    print("Qty:", item["quantity"])
+    print("Harga:", item["price_per_item"])
+    print()
+
+# Output yang diharapkan:
+# Item: Ayam Goreng
+# Qty: 2
+# Harga: 20000
+#
+# Item: Pasta Gigi
+# Qty: 3
+# Harga: 15000
+
+# TEST CASE 2
+# Membuat transaksi baru
+transaksi = Transaction()
+
+# Menambahkan barang ke transaksi
+transaksi.add_item("Ayam Goreng", 2, 20000)
+transaksi.add_item("Pasta Gigi", 3, 15000)
+
+# Menampilkan isi transaksi sebelum penghapusan
+print("Transaksi sebelum penghapusan:")
+for item in transaksi.items:
+    print("Item:", item["item_name"])
+    print("Qty:", item["quantity"])
+    print("Harga:", item["price_per_item"])
+    print()
+
+# Menghapus item "Pasta Gigi" dari transaksi
+transaksi.delete_item("Pasta Gigi")
+
+# Menampilkan isi transaksi setelah penghapusan
+print("\nTransaksi setelah penghapusan:")
+for item in transaksi.items:
+    print("Item:", item["item_name"])
+    print("Qty:", item["quantity"])
+    print("Harga:", item["price_per_item"])
+    print()
+
+# Output yang diharapkan:
+# Transaksi sebelum penghapusan:
+# Item: Ayam Goreng
+# Qty: 2
+# Harga: 20000
+#
+# Item: Pasta Gigi
+# Qty: 3
+# Harga: 15000
+#
+# Transaksi setelah penghapusan:
+# Item: Ayam Goreng
+# Qty: 2
+# Harga: 20000
+
+# TEST CASE 3
+# Membuat transaksi baru
+transaksi = Transaction()
+
+# Menambahkan barang ke transaksi
+transaksi.add_item("Ayam Goreng", 2, 20000)
+transaksi.add_item("Pasta Gigi", 3, 15000)
+
+# Menampilkan isi transaksi sebelum penghapusan
+print("Transaksi sebelum penghapusan:")
+for item in transaksi.items:
+    print("Item:", item["item_name"])
+    print("Qty:", item["quantity"])
+    print("Harga:", item["price_per_item"])
+    print()
+
+# Menghapus semua item dari transaksi
+transaksi.reset_transaction()
+
+# Menampilkan isi transaksi setelah penghapusan
+print("\nTransaksi setelah penghapusan:")
+for item in transaksi.items:
+    print("Item:", item["item_name"])
+    print("Qty:", item["quantity"])
+    print("Harga:", item["price_per_item"])
+    print()
+
+# Output yang diharapkan:
+# Transaksi sebelum penghapusan:
+# Item: Ayam Goreng
+# Qty: 2
+# Harga: 20000
+#
+# Item: Pasta Gigi
+# Qty: 3
+# Harga: 15000
+#
+# Transaksi setelah penghapusan:
+
+# TEST CASE 4
+# Membuat transaksi baru
+transaksi = Transaction()
+
+# Menambahkan barang ke transaksi
+transaksi.add_item("Ayam Goreng", 2, 20000)
+transaksi.add_item("Pasta Gigi", 3, 15000)
+
+# Menampilkan isi transaksi
+print("Transaksi:")
+for item in transaksi.items:
+    print("Item:", item["item_name"])
+    print("Qty:", item["quantity"])
+    print("Harga:", item["price_per_item"])
+    print()
+
+# Menghitung total belanja
+total_sebelum_diskon = transaksi.calculate_total_price()
+
+# Menampilkan total belanja sebelum diskon
+print("\nTotal Belanja Sebelum Diskon:", total_sebelum_diskon)
+
+# Menghitung diskon berdasarkan total belanja
+if total_sebelum_diskon > 500000:
+    diskon = total_sebelum_diskon * 0.1
+    total_akhir = total_sebelum_diskon - diskon
+    ucapan = "Selamat! Anda mendapatkan diskon 10%."
+elif total_sebelum_diskon > 300000:
+    diskon = total_sebelum_diskon * 0.08
+    total_akhir = total_sebelum_diskon - diskon
+    ucapan = "Selamat! Anda mendapatkan diskon 8%."
+elif total_sebelum_diskon > 200000:
+    diskon = total_sebelum_diskon * 0.05
+    total_akhir = total_sebelum_diskon - diskon
+    ucapan = "Selamat! Anda mendapatkan diskon 5%."
+else:
+    diskon = 0
+    total_akhir = total_sebelum_diskon
+    ucapan = "Anda tidak mendapatkan diskon."
+
+# Menampilkan total belanja setelah diskon dan ucapan
+print("Total Belanja Setelah Diskon:")
+print(ucapan)
+
+# Output yang diharapkan akan menampilkan detail transaksi, total sebelum diskon, total setelah diskon, dan ucapan sesuai dengan diskon yang diberikan.
