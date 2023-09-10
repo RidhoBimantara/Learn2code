@@ -125,10 +125,10 @@ This project has been an educational journey in creating a self-service supermar
 
 As we reflect on this project, we recognize that there are opportunities for further optimization and expansion that i would like to try. Some areas to explore include:
 
-  User Interface Enhancement: Consider adding a graphical user interface (GUI) to make the application more user-friendly and visually appealing. This could include features like item    images and a virtual shopping cart.
-  Database Integration: Implement a database to store transaction history, item details, and customer information. This would enable better data management and analytics.
-  Payment Integration: Integrate payment processing capabilities to allow customers to complete transactions, including payment methods such as credit cards, digital wallets, and cash.
-  Inventory Management: Expand the system to manage inventory levels, update stock counts, and provide alerts for low stock items.
-  Security Measures: Implement security features to protect customer data and ensure secure transactions, including encryption and authentication.
+- User Interface Enhancement: Consider adding a graphical user interface (GUI) to make the application more user-friendly and visually appealing. This could include features like item    images and a virtual shopping cart.
+- Database Integration: Implement a database to store transaction history, item details, and customer information. This would enable better data management and analytics.
+- Payment Integration: Integrate payment processing capabilities to allow customers to complete transactions, including payment methods such as credit cards, digital wallets, and cash.
+- Inventory Management: Expand the system to manage inventory levels, update stock counts, and provide alerts for low stock items.
+- Security Measures: Implement security features to protect customer data and ensure secure transactions, including encryption and authentication.
 
 By continuously improving and expanding this simple codebase, we can create a more comprehensive and efficient self-service supermarket system that meets the evolving needs of both customers and business owners. The journey of learning and enhancing this project is an exciting endeavor that can lead to valuable insights and skills in software development.
