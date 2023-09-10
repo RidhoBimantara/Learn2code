@@ -35,7 +35,7 @@ The code flow is explained as follows:
 
 # Explanation of Functions and Attributes Created
 
-Transaction: A class for managing transactions.
+- Transaction: A class for managing transactions.
 - add_item(item_name, quantity, price_per_item): Adds an item to the transaction.
 - update_item_name(old_name, new_name): Updates the item name in the transaction.
 - update_item_qty(item_name, new_quantity): Updates the item quantity in the transaction.
