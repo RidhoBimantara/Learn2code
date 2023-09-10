@@ -7,20 +7,20 @@ This project aims to create a self-service application that allows customers to 
 # Requirements and Objectives
 Requirements:
 
-  Python 3.x
-  PEP8 compliant code
-  Docstring documentation
-  Exception handling
-  Use of Python libraries such as Numpy if needed
+1. Python 3.x
+2. PEP8 compliant code
+3. Docstring documentation
+4. Exception handling
+5. Use of Python libraries such as Numpy if needed
   
 Objectives:
 
-  Create a self-service checkout system that allows customers to:
-  Add items to the transaction
-  Update items in the transaction
-  Remove items from the transaction
-  Calculate the total purchase amount
-  Provide discounts based on the total purchase amount
+1. Create a self-service checkout system that allows customers to:
+2. Add items to the transaction
+3. Update items in the transaction
+4. Remove items from the transaction
+5. Calculate the total purchase amount
+6. Provide discounts based on the total purchase amount
   
 # Code Flow Explanation or Flowchart
 The code flow is explained as follows:
@@ -36,14 +36,14 @@ The code flow is explained as follows:
 # Explanation of Functions and Attributes Created
 
 Transaction: A class for managing transactions.
-add_item(item_name, quantity, price_per_item): Adds an item to the transaction.
-update_item_name(old_name, new_name): Updates the item name in the transaction.
-update_item_qty(item_name, new_quantity): Updates the item quantity in the transaction.
-update_item_price(item_name, new_price): Updates the item price in the transaction.
-delete_item(item_name): Deletes an item from the transaction.
-reset_transaction(): Deletes all items from the transaction.
-check_order(): Checks for input errors in the transaction.
-calculate_total_price(): Calculates the total purchase amount with or without a discount.
+- add_item(item_name, quantity, price_per_item): Adds an item to the transaction.
+- update_item_name(old_name, new_name): Updates the item name in the transaction.
+- update_item_qty(item_name, new_quantity): Updates the item quantity in the transaction.
+- update_item_price(item_name, new_price): Updates the item price in the transaction.
+- delete_item(item_name): Deletes an item from the transaction.
+- reset_transaction(): Deletes all items from the transaction.
+- check_order(): Checks for input errors in the transaction.
+- calculate_total_price(): Calculates the total purchase amount with or without a discount.
 
 # Code Demonstrations with Test Cases
 
